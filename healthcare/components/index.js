@@ -1,0 +1,6 @@
+export { default as Login } from './Login/login'
+export { default as Register } from './Login/registeration'
+export { default as Header } from './Header/header'
+export { default as Search } from './Search/searchComponent'
+export { default as Publisher } from './VideoComponents/publisher'
+export { default as Subscriber } from './VideoComponents/subscriber'
