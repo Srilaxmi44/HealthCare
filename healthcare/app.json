@@ -1,11 +1,4 @@
 {
-  "expo": {
-    "name": "healthcare",
-    "slug": "healthcare",
-    "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ]
-  },
-  "name": "healthcare"
+  "name": "healthcare",
+  "displayName": "healthcare"
 }
