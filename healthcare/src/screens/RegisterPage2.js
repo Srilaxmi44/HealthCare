@@ -8,6 +8,7 @@ import {
 import React from 'react';
 import LinearGradient from 'react-native-linear-gradient';
 import Input from '../components/Input';
+import externalStyle from '../Styles/externalStyle';
 
 const RegisterPage2 = ({navigation}) => {
   return (
@@ -28,8 +29,8 @@ const RegisterPage2 = ({navigation}) => {
           Health Care
         </Text>
       </LinearGradient>
-      <View style={styles.container}>
-        <Text style={styles.container_text}>REGISTER</Text>
+      <View style={externalStyle.container}>
+        <Text style={externalStyle.container_text}>REGISTER</Text>
         <Input
           title="Firstname"
           placeholder="Enter ur firstname "
@@ -70,13 +71,15 @@ const RegisterPage2 = ({navigation}) => {
               colors={['#42a1f5', '#03bafc', '#42c5f5']}
               start={{x: 0, y: 0}}
               end={{x: 1, y: 0}}
-              style={styles.footer_container}>
-              <Text style={styles.footer_container_signText}>SIGNUP</Text>
+              style={externalStyle.footer_container}>
+              <Text style={externalStyle.footer_container_signText}>
+                SIGNUP
+              </Text>
             </LinearGradient>
           </TouchableOpacity>
 
           <TouchableOpacity>
-            <Text style={styles.footer_container_logContainer}>
+            <Text style={externalStyle.footer_container_logContainer}>
               Already have an account?{' '}
               <Text onPress={() => navigation.navigate('Login')}>Login</Text>
             </Text>
@@ -86,41 +89,5 @@ const RegisterPage2 = ({navigation}) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    elevation: 10,
-    backgroundColor: 'white',
-    borderRadius: 10,
-    margin: 10,
-    marginTop: -20,
-    paddingVertical: 20,
-    paddingHorizontal: 15,
-  },
-  container_text: {
-    fontSize: 19,
-    fontWeight: 'bold',
-    color: '#03bafc',
-    textAlign: 'center',
-  },
-  footer_container: {
-    borderRadius: 100,
-    width: 150,
-    alignSelf: 'center',
-    alignItems: 'center',
-    paddingVertical: 5,
-    marginTop: 50,
-    marginBottom: 10,
-  },
-  footer_container_signText: {
-    color: 'white',
-    fontSize: 19,
-  },
-  footer_container_logContainer: {
-    color: '#03bafc',
-    fontSize: 16,
-    textAlign: 'center',
-  },
-});
 
 export default RegisterPage2;

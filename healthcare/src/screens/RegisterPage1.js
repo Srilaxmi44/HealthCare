@@ -2,218 +2,108 @@ import React from 'react';
 import {
   View,
   Text,
-  Button,
   TouchableOpacity,
-  Dimensions,
-  TextInput,
-  Platform,
-  StyleSheet,
   ScrollView,
   StatusBar,
 } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 import LinearGradient from 'react-native-linear-gradient';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import Feather from 'react-native-vector-icons/Feather';
-import Datepicker from '../components/Datepicker';
+import externalStyle from '../Styles/externalStyle';
+import InputText from '../../components/common/InputText';
 
 const RegisterPage1 = ({navigation}) => {
   const [data, setData] = React.useState({
     firstName: '',
     lastName: '',
-    emailId: '',
-    gender: '',
+    EmailId: '',
     phoneNumber: '',
-    dateOfBirth: '',
-    check_textInputChange: false,
-    secureTextEntry: true,
-    confirm_secureTextEntry: true,
+    gender: '',
+    DateOfBirth: '',
   });
 
-  const textInputChange = val => {
-    if (val.length !== 0) {
-      setData({
-        ...data,
-        username: val,
-        check_textInputChange: true,
-      });
-    } else {
-      setData({
-        ...data,
-        username: val,
-        check_textInputChange: false,
-      });
-    }
-  };
-
-  const handlePasswordChange = val => {
-    setData({
-      ...data,
-      password: val,
-    });
-  };
-
-  const handleConfirmPasswordChange = val => {
-    setData({
-      ...data,
-      confirm_password: val,
-    });
-  };
-
-  const updateSecureTextEntry = () => {
-    setData({
-      ...data,
-      secureTextEntry: !data.secureTextEntry,
-    });
-  };
-
-  const updateConfirmSecureTextEntry = () => {
-    setData({
-      ...data,
-      confirm_secureTextEntry: !data.confirm_secureTextEntry,
-    });
-  };
-
   return (
-    <View style={styles.container}>
+    <View style={externalStyle.container}>
       <StatusBar backgroundColor="#009387" barStyle="light-content" />
-      <View style={styles.header}>
-        <Text style={styles.text_header}>Register Now!</Text>
+      <View style={externalStyle.header}>
+        <Text style={externalStyle.text_header}>Register Now!</Text>
       </View>
-      <Animatable.View animation="fadeInUpBig" style={styles.footer}>
+      <Animatable.View animation="fadeInUpBig" style={externalStyle.footer}>
         <ScrollView>
-          <Text style={styles.text_footer}>First Name</Text>
-          <View style={styles.action}>
-            <FontAwesome name="user-o" color="#05375a" size={20} />
-            <TextInput
-              placeholder="Your first name"
-              style={styles.textInput}
-              autoCapitalize="none"
-              onChangeText={val => textInputChange(val)}
+          <InputText
+            title="First Name"
+            placeholder="Your FirstName"
+            fontname="user"
+          />
+
+          <View style={externalStyle.viewContainer}>
+            <InputText
+              title="Last Name"
+              placeholder="Your LastName"
+              fontname="user"
             />
           </View>
 
-          <Text style={styles.text_footer_reuse}>Last Name</Text>
-          <View style={styles.action}>
-            <FontAwesome name="user-o" color="#05375a" size={20} />
-            <TextInput
-              placeholder="Your last name"
-              style={styles.textInput}
-              autoCapitalize="none"
-              onChangeText={val => textInputChange(val)}
+          <View style={externalStyle.viewContainer}>
+            <InputText
+              title="Email Id"
+              placeholder="Your  Email Id"
+              fontname="mail"
             />
           </View>
 
-          <Text style={styles.text_footer_reuse}>Email Id</Text>
-          <View style={styles.action}>
-            <Feather name="mail" color="#05375a" size={20} />
-            <TextInput
-              placeholder="Your emailid"
-              secureTextEntry={data.secureTextEntry ? true : false}
-              style={styles.textInput}
-              autoCapitalize="none"
-              onChangeText={val => handlePasswordChange(val)}
-            />
-            <TouchableOpacity onPress={updateSecureTextEntry}>
-              {data.secureTextEntry ? (
-                <Feather name="eye-off" color="grey" size={20} />
-              ) : (
-                <Feather name="eye" color="grey" size={20} />
-              )}
-            </TouchableOpacity>
-          </View>
-
-          <Text style={styles.text_footer_reuse}>Gender</Text>
-          <View style={styles.action}>
-            <Feather name="user" color="#05375a" size={20} />
-            <TextInput
-              placeholder="Your Gender"
-              secureTextEntry={data.secureTextEntry ? true : false}
-              style={styles.textInput}
-              autoCapitalize="none"
-              onChangeText={val => handlePasswordChange(val)}
+          <View style={externalStyle.viewContainer}>
+            <InputText
+              title=" Phone Number"
+              placeholder="Your   Phone Number"
+              fontname="phone"
             />
           </View>
 
-          <Text style={styles.text_footer_reuse}>Phone Number</Text>
-          <View style={styles.action}>
-            <Feather name="phone" color="#05375a" size={20} />
-            <TextInput
-              placeholder="Confirm phone number"
-              secureTextEntry={data.confirm_secureTextEntry ? true : false}
-              style={styles.textInput}
-              autoCapitalize="none"
-              onChangeText={val => handleConfirmPasswordChange(val)}
-            />
-            <TouchableOpacity onPress={updateConfirmSecureTextEntry}>
-              {data.secureTextEntry ? (
-                <Feather name="eye-off" color="grey" size={20} />
-              ) : (
-                <Feather name="eye" color="grey" size={20} />
-              )}
-            </TouchableOpacity>
-          </View>
-
-          <Text style={styles.text_footer_reuse}>Date Of Birth</Text>
-          <View style={styles.action}>
-            <Feather name="lock" color="#05375a" size={20} />
-            <TextInput
-              placeholder="Enter your date of birth"
-              secureTextEntry={data.confirm_secureTextEntry ? true : false}
-              style={styles.textInput}
-              autoCapitalize="none"
-              onChangeText={val => handleConfirmPasswordChange(val)}
+          <View style={externalStyle.viewContainer}>
+            <InputText
+              title="Gender"
+              placeholder="Your  Gender"
+              // fontname="user"
             />
           </View>
 
-          <View style={styles.textPrivate}>
-            <Text style={styles.color_textPrivate}>
+          <View style={externalStyle.viewContainer}>
+            <InputText
+              title="Date Of Birth"
+              placeholder="Your DateOfBirth"
+              fontname="calendar"
+            />
+          </View>
+
+          <View style={externalStyle.textPrivate}>
+            <Text style={externalStyle.color_textPrivate}>
               By signing up you agree to our
             </Text>
-            <Text style={[styles.color_textPrivate, {fontWeight: 'bold'}]}>
+            <Text
+              style={[externalStyle.color_textPrivate, {fontWeight: 'bold'}]}>
+              {' '}
               Terms of service
             </Text>
-            <Text style={styles.color_textPrivate}> and</Text>
-            <Text style={[styles.color_textPrivate, {fontWeight: 'bold'}]}>
+            <Text style={externalStyle.color_textPrivate}> and</Text>
+            <Text
+              style={[externalStyle.color_textPrivate, {fontWeight: 'bold'}]}>
+              {' '}
               Privacy policy
             </Text>
           </View>
-          <View style={styles.button}>
-            <TouchableOpacity style={styles.signIn} onPress={() => {}}>
+          <View style={externalStyle.button}>
+            <TouchableOpacity style={externalStyle.signIn} onPress={() => {}}>
               <LinearGradient
                 colors={['#08d4c4', '#01ab9d']}
-                style={styles.signIn}>
-                <Text
-                  style={[
-                    styles.textSign,
-                    {
-                      color: '#fff',
-                    },
-                  ]}>
-                  Register
-                </Text>
+                style={externalStyle.signIn}>
+                <Text style={externalStyle.textSignText}>Register</Text>
               </LinearGradient>
             </TouchableOpacity>
 
             <TouchableOpacity
               onPress={() => navigation.goBack()}
-              style={[
-                styles.signIn,
-                {
-                  borderColor: '#009387',
-                  borderWidth: 1,
-                  marginTop: 15,
-                },
-              ]}>
-              <Text
-                style={[
-                  styles.textSign,
-                  {
-                    color: '#009387',
-                  },
-                ]}>
-                Sign In
-              </Text>
+              style={externalStyle.touchableView_login}>
+              <Text style={externalStyle.textLoginText}>Log In</Text>
             </TouchableOpacity>
           </View>
         </ScrollView>
@@ -223,74 +113,3 @@ const RegisterPage1 = ({navigation}) => {
 };
 
 export default RegisterPage1;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#009387',
-  },
-  header: {
-    flex: 1,
-    justifyContent: 'flex-end',
-    paddingHorizontal: 20,
-    paddingBottom: 50,
-  },
-  footer: {
-    flex: Platform.OS === 'ios' ? 3 : 5,
-    backgroundColor: '#fff',
-    borderTopLeftRadius: 30,
-    borderTopRightRadius: 30,
-    paddingHorizontal: 20,
-    paddingVertical: 30,
-  },
-  text_header: {
-    color: '#fff',
-    fontWeight: 'bold',
-    fontSize: 30,
-  },
-  text_footer: {
-    color: '#05375a',
-    fontSize: 18,
-  },
-  text_footer_reuse: {
-    color: '#05375a',
-    fontSize: 18,
-    marginTop: 35,
-  },
-  action: {
-    flexDirection: 'row',
-    marginTop: 10,
-    borderBottomWidth: 1,
-    borderBottomColor: '#f2f2f2',
-    paddingBottom: 5,
-  },
-  textInput: {
-    flex: 1,
-    marginTop: Platform.OS === 'ios' ? 0 : -12,
-    paddingLeft: 10,
-    color: '#05375a',
-  },
-  button: {
-    alignItems: 'center',
-    marginTop: 50,
-  },
-  signIn: {
-    width: '100%',
-    height: 50,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 10,
-  },
-  textSign: {
-    fontSize: 18,
-    fontWeight: 'bold',
-  },
-  textPrivate: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    marginTop: 20,
-  },
-  color_textPrivate: {
-    color: 'grey',
-  },
-});
