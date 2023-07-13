@@ -8,10 +8,11 @@ import {
 } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 import LinearGradient from 'react-native-linear-gradient';
-import externalStyle from '../Styles/externalStyle';
+import externalStyle from '../../pages/Styles/externalStyle';
 import InputText from '../../components/common/InputText';
 
-const RegisterPage1 = ({navigation}) => {
+
+const RegisterPage1 = ({ navigation }) => {
   const [data, setData] = React.useState({
     firstName: '',
     lastName: '',
@@ -63,7 +64,7 @@ const RegisterPage1 = ({navigation}) => {
             <InputText
               title="Gender"
               placeholder="Your  Gender"
-              // fontname="user"
+            // fontname="user"
             />
           </View>
 
@@ -79,20 +80,16 @@ const RegisterPage1 = ({navigation}) => {
             <Text style={externalStyle.color_textPrivate}>
               By signing up you agree to our
             </Text>
-            <Text
-              style={[externalStyle.color_textPrivate, {fontWeight: 'bold'}]}>
-              {' '}
+            <Text style={[styles.color_textPrivate, { fontWeight: 'bold' }]}>
               Terms of service
             </Text>
-            <Text style={externalStyle.color_textPrivate}> and</Text>
-            <Text
-              style={[externalStyle.color_textPrivate, {fontWeight: 'bold'}]}>
-              {' '}
+            <Text style={styles.color_textPrivate}> and</Text>
+            <Text style={[styles.color_textPrivate, { fontWeight: 'bold' }]}>
               Privacy policy
             </Text>
           </View>
           <View style={externalStyle.button}>
-            <TouchableOpacity style={externalStyle.signIn} onPress={() => {}}>
+            <TouchableOpacity style={externalStyle.signIn} onPress={() => { }}>
               <LinearGradient
                 colors={['#08d4c4', '#01ab9d']}
                 style={externalStyle.signIn}>

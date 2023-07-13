@@ -8,15 +8,16 @@ import {
 import React from 'react';
 import LinearGradient from 'react-native-linear-gradient';
 import Input from '../components/Input';
-import externalStyle from '../Styles/externalStyle';
+import { Styles } from '../../pages/Styles';
+import { CSearch,CTextBox } from '@/components/common';
 
-const RegisterPage2 = ({navigation}) => {
+const RegisterPage2 = ({ navigation }) => {
   return (
     <View>
       <LinearGradient
         colors={['#42a1f5', '#03bafc', '#42c5f5']}
-        start={{x: 0, y: 0}}
-        end={{x: 1, y: 0}}
+        start={{ x: 0, y: 0 }}
+        end={{ x: 1, y: 0 }}
         style={{
           borderBottomLeftRadius: 15,
           borderBottomRightRadius: 15,
@@ -25,7 +26,7 @@ const RegisterPage2 = ({navigation}) => {
           alignItems: 'center',
           paddingTop: 40,
         }}>
-        <Text style={{color: 'white', fontSize: 31, fontWeight: 'bold'}}>
+        <Text style={{ color: 'white', fontSize: 31, fontWeight: 'bold' }}>
           Health Care
         </Text>
       </LinearGradient>
@@ -67,10 +68,10 @@ const RegisterPage2 = ({navigation}) => {
         <View>
           <TouchableOpacity>
             <LinearGradient
-              onPress={() => {}}
+              onPress={() => { }}
               colors={['#42a1f5', '#03bafc', '#42c5f5']}
-              start={{x: 0, y: 0}}
-              end={{x: 1, y: 0}}
+              start={{ x: 0, y: 0 }}
+              end={{ x: 1, y: 0 }}
               style={externalStyle.footer_container}>
               <Text style={externalStyle.footer_container_signText}>
                 SIGNUP
