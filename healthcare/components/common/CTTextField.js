@@ -1,14 +1,14 @@
 import { View, Text, TextInput } from 'react-native';
 import React from 'react';
-import { Styles } from '@/Styles';
+import { Styles } from 'styles';
 import Feather from 'react-native-vector-icons/Feather';
-
-const cTextField = ({ props }) => {
+Feather.loadFont();
+const cTextField = (props) => {
   return (
     <View>
       <Text style={Styles.text_footer}>{props.title}</Text>
       <View style={Styles.action}>
-        {(props.isIcon &&
+        {(props.fontname != "" &&
           <Feather name={props.fontname} color="#05375a" size={20} />
         )}
         <TextInput

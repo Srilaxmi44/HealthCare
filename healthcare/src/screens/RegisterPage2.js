@@ -7,10 +7,9 @@ import {
 } from 'react-native';
 import React from 'react';
 import LinearGradient from 'react-native-linear-gradient';
-import Input from '../components/Input';
-import { Styles } from '../../pages/Styles';
-import { CSearch,CTextBox } from '@/components/common';
-
+// import Input from '../components/Input';
+import { CTextBox } from 'components';
+import { style } from '@/style';
 const RegisterPage2 = ({ navigation }) => {
   return (
     <View>
@@ -30,35 +29,35 @@ const RegisterPage2 = ({ navigation }) => {
           Health Care
         </Text>
       </LinearGradient>
-      <View style={externalStyle.container}>
-        <Text style={externalStyle.container_text}>REGISTER</Text>
-        <Input
+      <View style={Styles.container}>
+        <Text style={Styles.container_text}>REGISTER</Text>
+        <CTextBox
           title="Firstname"
           placeholder="Enter ur firstname "
           keyboard="default"
         />
-        <Input
+        <CTextBox
           title="Lastname"
           placeholder="Enter ur Lastname "
           keyboard="default"
         />
-        <Input
+        <CTextBox
           title="Email"
           placeholder="Enter ur email"
           keyboard="email-address"
         />
-        <Input
+        <CTextBox
           title="Contact Number"
           placeholder="Enter ur contact number"
           keyboard="number-pad"
         />
-        <Input
+        <CTextBox
           title="Date Of Birth"
           placeholder="Enter ur data of birth"
           keyboard="default"
           is_password={true}
         />
-        <Input
+        <CTextBox
           title="Gender"
           placeholder="Enter ur Gender"
           keyboard="default"
@@ -72,15 +71,15 @@ const RegisterPage2 = ({ navigation }) => {
               colors={['#42a1f5', '#03bafc', '#42c5f5']}
               start={{ x: 0, y: 0 }}
               end={{ x: 1, y: 0 }}
-              style={externalStyle.footer_container}>
-              <Text style={externalStyle.footer_container_signText}>
+              style={Styles.footer_container}>
+              <Text style={Styles.footer_container_signText}>
                 SIGNUP
               </Text>
             </LinearGradient>
           </TouchableOpacity>
 
           <TouchableOpacity>
-            <Text style={externalStyle.footer_container_logContainer}>
+            <Text style={Styles.footer_container_logContainer}>
               Already have an account?{' '}
               <Text onPress={() => navigation.navigate('Login')}>Login</Text>
             </Text>
