@@ -1,1 +1,1 @@
-export { default as Styles } from './externalStyle'
+export {default as Styles} from './externalStyle';

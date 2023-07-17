@@ -58,7 +58,7 @@ const externalStyle = StyleSheet.create({
   text_header: {
     color: '#fff',
     fontWeight: 'bold',
-    fontSize: 30,
+    fontSize: 20,
   },
   text_footer: {
     color: '#05375a',
@@ -111,13 +111,53 @@ const externalStyle = StyleSheet.create({
   textPrivate: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    marginTop: 20,
+    // marginTop: 20,
+    marginBottom: 10,
   },
   color_textPrivate: {
     color: 'grey',
   },
   viewContainer: {
     marginTop: 35,
+  },
+  containerImage: {
+    width: '60%',
+    height: '40%',
+    // borderRadius: 20,
+    marginTop: 10,
+    backgroundColor: 'red',
+  },
+
+  //dropdown
+  dr_viewContainer: {flex: 1, width: '100%', backgroundColor: '#FFF'},
+  dr_scrollViewContainer: {
+    flexGrow: 1,
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingVertical: '10%',
+    paddingBottom: '20%',
+  },
+  dr_dropdownBtnStyle: {
+    width: '100%',
+    height: 50,
+    backgroundColor: '#FFF',
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: '#444',
+    // marginLeft: 10,
+    marginTop: -30,
+    // marginBottom: 100,
+  },
+  dr_dropdownBtnTxtStyle: {color: '#444', textAlign: 'left'},
+  dr_dropdownDropdownStyle: {backgroundColor: '#EFEFEF'},
+  dr_dropdownRowStyle: {
+    backgroundColor: '#EFEFEF',
+    borderBottomColor: '#C5C5C5',
+  },
+  dr_dropdownRowTxtStyle: {color: '#444', textAlign: 'left'},
+  dr_text_footer: {
+    color: '#05375a',
+    fontSize: 18,
   },
 });
 
