@@ -159,6 +159,69 @@ const externalStyle = StyleSheet.create({
     color: '#05375a',
     fontSize: 18,
   },
+  containerLogin: {
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height:'100%'
+  },
+  iconHeader: {
+    width: '90%',
+   height: 100,
+ },
+ card: {
+  backgroundColor: '#fff',
+  borderRadius: 10,
+  shadowColor: '#000',
+  shadowOffset: {
+    width: 0,
+    height: 4,
+  },
+  shadowOpacity: 0.2,
+  shadowRadius: 5,
+  elevation: 5,
+  padding: 20,
+  width: '90%',
+  alignItems: 'center',
+},
+forgotPasswordButton: {
+  width:'100%',
+  textAlign:'flex-end',
+},
+forgotPasswordButtonText: {
+  color: '#20B2AA',
+  fontSize: 12,
+  fontWeight: 'bold',
+  textAlign:'right'
+},
+input: {
+  borderWidth: 1,
+  borderColor: '#ccc',
+  borderRadius: 5,
+  padding: 10,
+  marginVertical: 10,
+  width: '100%',
+},
+buttonLogin: {
+  backgroundColor: '#20B2AA',
+  borderRadius: 5,
+  padding: 10,
+  marginTop: 10,
+  width: '100%',
+  alignItems: 'center',
+},
+buttonText: {
+  color: '#fff',
+  fontWeight: 'bold',
+},
+createAccountButton: {
+  marginTop: 20,
+},
+createAccountButtonText: {
+  color: '#20B2AA',
+  fontSize: 12,
+  fontWeight: 'bold',
+},
 });
 
 export default externalStyle;
