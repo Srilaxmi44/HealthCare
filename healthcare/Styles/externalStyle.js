@@ -159,6 +159,7 @@ const externalStyle = StyleSheet.create({
     color: '#05375a',
     fontSize: 18,
   },
+  // login page
   containerLogin: {
     backgroundColor: '#fff',
     alignItems: 'center',
@@ -221,6 +222,142 @@ createAccountButtonText: {
   color: '#20B2AA',
   fontSize: 12,
   fontWeight: 'bold',
+},
+//forgot Page
+containerMainForgot: {
+  flex: 1,
+  padding: 10,
+  paddingTop:60,
+  backgroundColor: '#fff'
+},
+sendOTPButtonForgot: {
+  color: '#20B2AA',
+  fontSize: 12,
+  fontWeight: 'bold',
+  textAlign: 'right',
+  padding: 10
+},
+sendOTPButtonViewForgot: {
+  width: "100%",
+  textAlign: "flex-end",
+},
+titleForgot: {
+  fontSize: 20,
+  marginBottom: 10,
+  justifyContent: 'center',
+  width:45,
+  height:45,
+},
+containerForgot: {
+  flex: 1,
+   alignItems: 'center',
+  backgroundColor: '#fff'
+},
+formForgot: {
+  width: '80%',
+},
+labelEnterOTPForgot: {
+  marginTop: 10,
+  marginBottom: 5
+},
+labelForgot: {
+  marginTop: 20,
+  marginBottom: 5
+},
+inputForgot: {
+  borderColor: '#ccc',
+  borderWidth: 1,
+  borderRadius: 5,
+  padding: 10,
+  fontSize: 18,
+},
+buttonForgot: {
+  marginTop: 20,
+  backgroundColor: '#20B2AA',
+  borderRadius: 5,
+  paddingVertical: 10,
+  paddingHorizontal: 20,
+},
+buttonTextForgot: {
+  color: '#fff',
+  fontSize: 18,
+  textAlign: 'center',
+},
+//CTSearchList
+containerSearch: {
+  backgroundColor: 'white',
+
+},
+text_headerSearch: {
+color: 'black',
+fontWeight: 'bold',
+fontSize: 20,
+marginBottom:10
+},
+searchContainer: {
+  backgroundColor: 'white',
+  padding: 8,
+  marginTop: 50,
+},
+searchInput: {
+  height: 40,
+  borderColor: 'gray',
+  borderWidth: 1,
+  padding: 8,
+  paddingTop:10,
+},
+itemContainerSearch: {
+  flex: 1,
+  flexDirection: 'row',
+  alignItems: 'center',
+  padding: 16,
+  borderBottomWidth: 1,
+  borderBottomColor: '#eee',
+
+},
+textContainerSearch: {
+  marginLeft: 16,
+},
+nameTextSearch: {
+  fontSize: 16,
+  fontWeight: 'bold',
+},
+//CTListItems
+containerList: {
+  backgroundColor: '#fff',
+  paddingBottom:'100%',
+},
+itemContainerList: {
+  flex: 1,
+  flexDirection: 'row',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  padding: 16,
+  borderBottomWidth: 1,
+  borderBottomColor: '#eee',
+},
+imageEndList: {
+  width: 60,
+  height: 60,
+  borderRadius: 30,
+},
+imageList: {
+  width: 60,
+  height: 60,
+  borderRadius: 30,
+},
+textContainerList: {
+  marginRight: 60,
+},
+nameTextList: {
+  fontSize: 16,
+  fontWeight: 'bold',
+  marginBottom:5
+},
+phoneTextList: {
+  fontSize: 16,
+  color: '#999',
+  marginBottom:5
 },
 });
 

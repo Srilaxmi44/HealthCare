@@ -28,7 +28,7 @@ const Login = ({navigation}) => {
           <Text style={Styles.forgotPasswordButtonText}>Forgot?</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={Styles.buttonLogin}>
+        <TouchableOpacity style={Styles.buttonLogin} onPress={() => navigation.navigate('Dashboard') }>
           <Text style={Styles.buttonText}>Login</Text>
         </TouchableOpacity>
 
