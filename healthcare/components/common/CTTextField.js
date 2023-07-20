@@ -1,8 +1,10 @@
 import React from 'react';
-import {View, Text, TextInput} from 'react-native';
+import {View, Text, TextInput, TouchableOpacity} from 'react-native';
 import {Styles} from 'Styles';
 import Feather from 'react-native-vector-icons/Feather';
+import Icon from 'react-native-vector-icons/FontAwesome';
 Feather.loadFont();
+
 const cTextField = props => {
   return (
     <View>
@@ -15,9 +17,18 @@ const cTextField = props => {
           placeholder={props.placeholder}
           style={Styles.textInput}
           autoCapitalize="none"
-          secureTextEntry={props.is_password}
+          secureTextEntry={props.secureTextEntry}
           keyboardType={props.keyboard}
         />
+
+        {props.title === 'password' ? (
+          <TouchableOpacity onPress={props.onTogglePasswordVisibility}>
+            <Icon
+              name={props.secureTextEntry ? 'eye-slash' : 'eye'}
+              size={20}
+            />
+          </TouchableOpacity>
+        ) : null}
       </View>
     </View>
   );

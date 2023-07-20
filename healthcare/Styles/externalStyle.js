@@ -164,201 +164,226 @@ const externalStyle = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-    height:'100%'
+    height: '100%',
   },
   iconHeader: {
-    width: '90%',
-   height: 100,
- },
- card: {
-  backgroundColor: '#fff',
-  borderRadius: 10,
-  shadowColor: '#000',
-  shadowOffset: {
-    width: 0,
-    height: 4,
+    width: '80%',
+    height: 50,
+    marginLeft: 43,
   },
-  shadowOpacity: 0.2,
-  shadowRadius: 5,
-  elevation: 5,
-  padding: 20,
-  width: '90%',
-  alignItems: 'center',
-},
-forgotPasswordButton: {
-  width:'100%',
-  textAlign:'flex-end',
-},
-forgotPasswordButtonText: {
-  color: '#20B2AA',
-  fontSize: 12,
-  fontWeight: 'bold',
-  textAlign:'right'
-},
-input: {
-  borderWidth: 1,
-  borderColor: '#ccc',
-  borderRadius: 5,
-  padding: 10,
-  marginVertical: 10,
-  width: '100%',
-},
-buttonLogin: {
-  backgroundColor: '#20B2AA',
-  borderRadius: 5,
-  padding: 10,
-  marginTop: 10,
-  width: '100%',
-  alignItems: 'center',
-},
-buttonText: {
-  color: '#fff',
-  fontWeight: 'bold',
-},
-createAccountButton: {
-  marginTop: 20,
-},
-createAccountButtonText: {
-  color: '#20B2AA',
-  fontSize: 12,
-  fontWeight: 'bold',
-},
-//forgot Page
-containerMainForgot: {
-  flex: 1,
-  padding: 10,
-  paddingTop:60,
-  backgroundColor: '#fff'
-},
-sendOTPButtonForgot: {
-  color: '#20B2AA',
-  fontSize: 12,
-  fontWeight: 'bold',
-  textAlign: 'right',
-  padding: 10
-},
-sendOTPButtonViewForgot: {
-  width: "100%",
-  textAlign: "flex-end",
-},
-titleForgot: {
-  fontSize: 20,
-  marginBottom: 10,
-  justifyContent: 'center',
-  width:45,
-  height:45,
-},
-containerForgot: {
-  flex: 1,
-   alignItems: 'center',
-  backgroundColor: '#fff'
-},
-formForgot: {
-  width: '80%',
-},
-labelEnterOTPForgot: {
-  marginTop: 10,
-  marginBottom: 5
-},
-labelForgot: {
-  marginTop: 20,
-  marginBottom: 5
-},
-inputForgot: {
-  borderColor: '#ccc',
-  borderWidth: 1,
-  borderRadius: 5,
-  padding: 10,
-  fontSize: 18,
-},
-buttonForgot: {
-  marginTop: 20,
-  backgroundColor: '#20B2AA',
-  borderRadius: 5,
-  paddingVertical: 10,
-  paddingHorizontal: 20,
-},
-buttonTextForgot: {
-  color: '#fff',
-  fontSize: 18,
-  textAlign: 'center',
-},
-//CTSearchList
-containerSearch: {
-  backgroundColor: 'white',
+  card: {
+    backgroundColor: '#fff',
+    borderRadius: 10,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: 5,
+    elevation: 5,
+    padding: 20,
+    width: '90%',
+    alignItems: 'center',
+  },
+  forgotPasswordButton: {
+    width: '100%',
+    textAlign: 'flex-end',
+  },
+  forgotPasswordButtonText: {
+    color: '#20B2AA',
+    fontSize: 15,
+    fontWeight: 'bold',
+    textAlign: 'right',
+    marginRight: 20,
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: '#ccc',
+    borderRadius: 5,
+    padding: 10,
+    marginVertical: 10,
+    width: '100%',
+  },
+  buttonLogin: {
+    backgroundColor: '#20B2AA',
+    borderRadius: 5,
+    padding: 10,
+    marginTop: 10,
+    width: '100%',
+    alignItems: 'center',
+  },
+  buttonText: {
+    color: '#fff',
+    fontWeight: 'bold',
+  },
+  createAccountButton: {
+    marginTop: 20,
+  },
+  createAccountButtonText: {
+    color: '#20B2AA',
+    fontSize: 12,
+    fontWeight: 'bold',
+  },
 
-},
-text_headerSearch: {
-color: 'black',
-fontWeight: 'bold',
-fontSize: 20,
-marginBottom:10
-},
-searchContainer: {
-  backgroundColor: 'white',
-  padding: 8,
-  marginTop: 50,
-},
-searchInput: {
-  height: 40,
-  borderColor: 'gray',
-  borderWidth: 1,
-  padding: 8,
-  paddingTop:10,
-},
-itemContainerSearch: {
-  flex: 1,
-  flexDirection: 'row',
-  alignItems: 'center',
-  padding: 16,
-  borderBottomWidth: 1,
-  borderBottomColor: '#eee',
+  passwordView: {
+    width: 300,
+    marginTop: 35,
+  },
+  eyeIconView: {
+    marginTop: -45,
+    position: 'absolute',
+    marginLeft: 270,
+  },
+  mailView: {
+    width: 300,
+  },
+  //forgot Page
+  containerMainForgot: {
+    flex: 1,
+    padding: 10,
+    paddingTop: 60,
+    backgroundColor: '#fff',
+  },
+  sendOTPButtonForgot: {
+    color: '#20B2AA',
+    fontSize: 12,
+    fontWeight: 'bold',
+    textAlign: 'right',
+    padding: 10,
+  },
+  sendOTPButtonViewForgot: {
+    width: '100%',
+    textAlign: 'flex-end',
+  },
+  titleForgot: {
+    fontSize: 20,
+    marginBottom: 10,
+    justifyContent: 'center',
+    width: 45,
+    height: 45,
+    // marginTop: 30,
+  },
+  containerForgot: {
+    flex: 1,
+    alignItems: 'center',
+    backgroundColor: '#fff',
+  },
+  formForgot: {
+    width: '80%',
+  },
+  labelEnterOTPForgot: {
+    marginTop: 10,
+    marginBottom: 5,
+  },
+  labelForgot: {
+    marginTop: 20,
+    marginBottom: 5,
+  },
+  inputForgot: {
+    borderColor: '#ccc',
+    borderWidth: 1,
+    borderRadius: 5,
+    padding: 10,
+    fontSize: 18,
+  },
+  buttonForgot: {
+    marginTop: 20,
+    backgroundColor: '#20B2AA',
+    borderRadius: 5,
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+  },
+  buttonTextForgot: {
+    color: '#fff',
+    fontSize: 18,
+    textAlign: 'center',
+  },
+  iconView: {
+    marginLeft: 340,
+    position: 'absolute',
+    marginTop: -10,
+  },
 
-},
-textContainerSearch: {
-  marginLeft: 16,
-},
-nameTextSearch: {
-  fontSize: 16,
-  fontWeight: 'bold',
-},
-//CTListItems
-containerList: {
-  backgroundColor: '#fff',
-  paddingBottom:'100%',
-},
-itemContainerList: {
-  flex: 1,
-  flexDirection: 'row',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-  padding: 16,
-  borderBottomWidth: 1,
-  borderBottomColor: '#eee',
-},
-imageEndList: {
-  width: 60,
-  height: 60,
-  borderRadius: 30,
-},
-imageList: {
-  width: 60,
-  height: 60,
-  borderRadius: 30,
-},
-textContainerList: {
-  marginRight: 60,
-},
-nameTextList: {
-  fontSize: 16,
-  fontWeight: 'bold',
-  marginBottom:5
-},
-phoneTextList: {
-  fontSize: 16,
-  color: '#999',
-  marginBottom:5
-},
+  //CTSearchList
+  containerSearch: {
+    backgroundColor: 'white',
+  },
+  text_headerSearch: {
+    color: 'black',
+    fontWeight: 'bold',
+    fontSize: 20,
+    marginBottom: 10,
+  },
+  searchContainer: {
+    backgroundColor: 'white',
+    padding: 8,
+    marginTop: 50,
+  },
+  searchInput: {
+    height: 40,
+    borderColor: 'gray',
+    borderWidth: 1,
+    padding: 8,
+    paddingTop: 10,
+  },
+  itemContainerSearch: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 16,
+    borderBottomWidth: 1,
+    borderBottomColor: '#eee',
+  },
+  textContainerSearch: {
+    marginLeft: 16,
+  },
+  nameTextSearch: {
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  //CTListItems
+  containerList: {
+    backgroundColor: '#fff',
+    paddingBottom: '100%',
+  },
+  itemContainerList: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: 16,
+    borderBottomWidth: 1,
+    borderBottomColor: '#eee',
+  },
+  imageEndList: {
+    width: 60,
+    height: 60,
+    borderRadius: 30,
+  },
+  imageList: {
+    width: 60,
+    height: 60,
+    borderRadius: 30,
+  },
+  textContainerList: {
+    marginRight: 60,
+  },
+  nameTextList: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginBottom: 5,
+  },
+  phoneTextList: {
+    fontSize: 16,
+    color: '#999',
+    marginBottom: 5,
+  },
+
+  //Header
+  headerViewContainer: {
+    backgroundColor: 'aqua',
+  },
 });
 
 export default externalStyle;
