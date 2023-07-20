@@ -79,32 +79,3 @@ const Login = ({navigation}) => {
 };
 
 export default Login;
-
-// import React, {useState} from 'react';
-// import {View, TextInput, TouchableOpacity} from 'react-native';
-// import {CTextBox, CSearch, CTDropdown, CT} from 'components';
-// import Icon from 'react-native-vector-icons/FontAwesome';
-
-// const Login = () => {
-//   const [password, setPassword] = useState('');
-//   const [passwordVisible, setPasswordVisible] = useState(false);
-
-//   const togglePasswordVisibility = () => {
-//     setPasswordVisible(!passwordVisible);
-//   };
-//   return (
-//     <View>
-//       <CTextBox
-//         placeholder="Enter Password"
-//         secureTextEntry={!passwordVisible}
-//         onTogglePasswordVisibility={togglePasswordVisibility}
-//         title="Password"
-//         fontname="lock"
-//         value={password}
-//         onChangeText={setPassword}
-//       />
-//     </View>
-//   );
-// };
-
-// export default Login;

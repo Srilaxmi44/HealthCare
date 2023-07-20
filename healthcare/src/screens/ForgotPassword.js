@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import {Styles} from 'Styles';
-import {CTextBox, CSearch, CTDropdown, CTHeader} from 'components';
+import {CTextBox, CSearch, CTDropdown, CTHeader, CTFooter} from 'components';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 const ForgotPassword = ({navigation}) => {
@@ -37,12 +37,12 @@ const ForgotPassword = ({navigation}) => {
 
   return (
     <>
-      <View>
+      {/* <View>
         <CTHeader />
-      </View>
+      </View> */}
 
       <View style={Styles.containerMainForgot}>
-        <View style={Styles.iconView_dd}>
+        <View style={Styles.iconView_dd_backward}>
           <TouchableOpacity
             style={Styles.titleForgot}
             onPress={() => handleFinalSubmit()}>
@@ -53,16 +53,16 @@ const ForgotPassword = ({navigation}) => {
           </TouchableOpacity>
         </View>
 
-        <View style={Styles.iconView_dd}>
+        {/* <View style={Styles.iconView_dd_forward}>
           <TouchableOpacity
             style={Styles.titleForgot}
             onPress={() => handleFinalSubmit()}>
-            <Image
+            {/* <Image
               style={Styles.titleForgot}
               source={require('../../assets/Images/forward.png')}
-            />
+            /> 
           </TouchableOpacity>
-        </View>
+        </View> */}
 
         <View style={Styles.containerForgot}>
           <View style={Styles.formForgot}>
@@ -140,6 +140,8 @@ const ForgotPassword = ({navigation}) => {
           </View>
         </View>
       </View>
+
+      <CTFooter />
     </>
   );
 };

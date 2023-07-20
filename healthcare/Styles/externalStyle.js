@@ -299,10 +299,15 @@ const externalStyle = StyleSheet.create({
     fontSize: 18,
     textAlign: 'center',
   },
-  iconView: {
-    marginLeft: 340,
+  iconView_dd_forward: {
+    marginLeft: 350,
+    backgroundColor: 'aqua',
     position: 'absolute',
     marginTop: -10,
+  },
+  iconView_dd_backward: {
+    marginTop: -100,
+    marginLeft: -10,
   },
 
   //CTSearchList
@@ -383,6 +388,18 @@ const externalStyle = StyleSheet.create({
   //Header
   headerViewContainer: {
     backgroundColor: 'aqua',
+    padding: 10,
+  },
+
+  //footerHeader
+  footHeaderText: {
+    color: 'white',
+    fontWeight: 'bold',
+    fontSize: 30,
+  },
+  footerHeaderGradient: {
+    padding: 10,
+    alignItems: 'center',
   },
 });
 
