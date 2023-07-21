@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 
 const externalStyle = StyleSheet.create({
   ///styles for registerpage2
@@ -103,8 +103,11 @@ const externalStyle = StyleSheet.create({
     fontWeight: 'bold',
     color: '#fff',
   },
+  loginHeaderView: {
+    paddingBottom: 10
+  },
   textLoginText: {
-    fontSize: 18,
+    fontSize: 22,
     fontWeight: 'bold',
     color: '#009387',
   },
@@ -129,7 +132,7 @@ const externalStyle = StyleSheet.create({
   },
 
   //dropdown
-  dr_viewContainer: {flex: 1, width: '100%', backgroundColor: '#FFF'},
+  dr_viewContainer: { flex: 1, width: '100%', backgroundColor: '#FFF' },
   dr_scrollViewContainer: {
     flexGrow: 1,
     justifyContent: 'space-between',
@@ -148,13 +151,13 @@ const externalStyle = StyleSheet.create({
     marginTop: -30,
     // marginBottom: 100,
   },
-  dr_dropdownBtnTxtStyle: {color: '#444', textAlign: 'left'},
-  dr_dropdownDropdownStyle: {backgroundColor: '#EFEFEF'},
+  dr_dropdownBtnTxtStyle: { color: '#444', textAlign: 'left' },
+  dr_dropdownDropdownStyle: { backgroundColor: '#EFEFEF' },
   dr_dropdownRowStyle: {
     backgroundColor: '#EFEFEF',
     borderBottomColor: '#C5C5C5',
   },
-  dr_dropdownRowTxtStyle: {color: '#444', textAlign: 'left'},
+  dr_dropdownRowTxtStyle: { color: '#444', textAlign: 'left' },
   dr_text_footer: {
     color: '#05375a',
     fontSize: 18,
@@ -400,6 +403,10 @@ const externalStyle = StyleSheet.create({
   footerHeaderGradient: {
     padding: 10,
     alignItems: 'center',
+  },
+  fontText: {
+    fontFamily: 'yarofont',
+    fontSize: 20,
   },
 });
 
