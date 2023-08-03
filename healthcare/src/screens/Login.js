@@ -34,7 +34,7 @@ const Login = ({ navigation }) => {
             justifyContent: 'center',
           }}>
           <View>
-            <Image source={Logo} style={{ height: 50, width: 50 }} />
+            <Image source={Logo} style={Styles.loginLgo} />
           </View>
           <View>
             <Text style={Styles.textLoginText}>Login</Text>

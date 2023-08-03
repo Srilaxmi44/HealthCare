@@ -129,10 +129,16 @@ const externalStyle = StyleSheet.create({
     // borderRadius: 20,
     marginTop: 10,
     resizeMode: 'fill',
+    marginLeft: 13
 
 
   },
-
+  loginLgo: {
+    width: 75,
+    height: 70,
+    marginLeft: -10,
+    resizeMode: 'fill'
+  },
   //dropdown
   dr_viewContainer: { flex: 1, width: '100%', backgroundColor: '#FFF' },
   dr_scrollViewContainer: {
