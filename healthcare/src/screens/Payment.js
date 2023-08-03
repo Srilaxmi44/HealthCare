@@ -165,7 +165,7 @@
 
 // export default Payment;
 
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   StyleSheet,
   Text,
@@ -175,7 +175,7 @@ import {
   TouchableOpacity,
   Image,
 } from 'react-native';
-import {Styles} from 'Styles';
+import { Styles } from 'Styles';
 import {
   CTextBox,
   CSearch,
@@ -185,9 +185,9 @@ import {
   CTextInput,
 } from 'components';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import {Logo} from 'assets';
+import { Logo } from 'assets';
 
-const Payment = ({navigation}) => {
+const Payment = ({ navigation }) => {
   const [password, setPassword] = useState('');
   const [isPasswordVisible, setPasswordVisible] = useState(false);
 
@@ -230,7 +230,7 @@ const Payment = ({navigation}) => {
           <View>
             <Image
               source={Logo}
-              style={{height: 50, width: 50, marginLeft: 25}}
+              style={{ height: 50, width: 50, marginLeft: 25 }}
             />
           </View>
           <View>
@@ -240,17 +240,18 @@ const Payment = ({navigation}) => {
         <View style={Styles.card}>
           <View style={Styles.mailView}>
             <CTextBox
-              title="Mobile Number"
-              placeholder="Enter Number"
+              title="Email/Phone Number"
+              placeholder="Email/Phone Number"
               type="tel"
               max={10}
             />
 
-            <TouchableOpacity style={Styles.buttonLink}>
-              <Text style={Styles.buttonText}>Send OTP</Text>
+          </View>
+          <View style={{ justifyContent: 'flex-end', width: '100%', alignItems: 'flex-end', paddingTop: 8, color: '#51A7F9' }}>
+            <TouchableOpacity >
+              <Text style={{ color: '#51A7F9', fontWeight: 'bold' }}> Send OTP</Text>
             </TouchableOpacity>
           </View>
-
           {/* <View>
             <Text style={{marginLeft: -500}}>Enter OTP</Text>
           </View> */}
@@ -261,9 +262,9 @@ const Payment = ({navigation}) => {
               margin: 10,
               justifyContent: 'flex-end',
             }}></View> */}
-          <View style={{marginTop: 20}}>
-            <Text style={{marginBottom: 5, color: '#05375a', fontSize: 15}}>
-              Enter Otp
+          <View style={{ marginTop: 10 }}>
+            <Text style={{ marginBottom: 5, color: '#05375a', fontSize: 15 }}>
+              Enter OTP
             </Text>
             <View style={Styles.otpContainer}>
               {[...Array(6)].map((_, index) => (
