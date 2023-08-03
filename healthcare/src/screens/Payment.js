@@ -190,9 +190,28 @@ import {Logo} from 'assets';
 const Payment = ({navigation}) => {
   const [password, setPassword] = useState('');
   const [isPasswordVisible, setPasswordVisible] = useState(false);
+
+  //payment
+  const [otp, setOtp] = useState('');
+  let otpInputRefs = [];
   Icon.loadFont();
+
   const togglePasswordVisibility = () => {
     setPasswordVisible(!isPasswordVisible);
+  };
+
+  // Function to handle OTP submission
+  const handleSubmitOTP = () => {
+    // Here you can add the logic to verify the OTP
+    // For this example, we'll just print it to the console
+    alert('OTP entered:', otp);
+    // Clear OTP input after submission
+    setOtp('');
+  };
+
+  // Function to handle individual OTP input change
+  const handleOtpInputChange = value => {
+    setOtp(value);
   };
 
   return (
@@ -209,10 +228,13 @@ const Payment = ({navigation}) => {
             justifyContent: 'center',
           }}>
           <View>
-            <Image source={Logo} style={{height: 50, width: 50}} />
+            <Image
+              source={Logo}
+              style={{height: 50, width: 50, marginLeft: 25}}
+            />
           </View>
           <View>
-            <Text style={Styles.textLoginText}>OTP</Text>
+            <Text style={Styles.textLoginText}>Verify OTP</Text>
           </View>
         </View>
         <View style={Styles.card}>
@@ -223,11 +245,62 @@ const Payment = ({navigation}) => {
               type="tel"
               max={10}
             />
+
+            <TouchableOpacity style={Styles.buttonLogin}>
+              <Text style={Styles.buttonText}>Send OTP</Text>
+            </TouchableOpacity>
           </View>
+
+          {/* <View>
+            <Text style={{marginLeft: -500}}>Enter OTP</Text>
+          </View> */}
+
+          {/* <View
+            style={{
+              alignItems: 'flex-end',
+              margin: 10,
+              justifyContent: 'flex-end',
+            }}></View> */}
+          <View style={{marginTop: 20}}>
+            <Text style={{marginBottom: 5, color: '#05375a', fontSize: 15}}>
+              Enter Otp
+            </Text>
+            <View style={Styles.otpContainer}>
+              {[...Array(6)].map((_, index) => (
+                <TextInput
+                  key={index}
+                  style={Styles.otpInput}
+                  maxLength={1}
+                  keyboardType="numeric"
+                  onChangeText={text => {
+                    // Update the OTP state when a digit is entered
+                    handleOtpInputChange(prevOtp => {
+                      const otpArray = prevOtp.split('');
+                      otpArray[index] = text;
+                      return otpArray.join('');
+                    });
+
+                    // Automatically move to the next input field when 1 digit is entered
+                    if (text && index < 5) {
+                      otpInputRefs[index + 1].focus();
+                    }
+
+                    // If the last input field is filled, dismiss the keyboard
+                    if (index === 5 && text) {
+                      Keyboard.dismiss();
+                    }
+                  }}
+                  ref={ref => (otpInputRefs[index] = ref)}
+                  value={otp[index] || ''}
+                />
+              ))}
+            </View>
+          </View>
+
           <TouchableOpacity
             style={Styles.buttonLogin}
-            onPress={() => navigation.navigate('PaySubmit')}>
-            <Text style={Styles.buttonText}>Send OTP</Text>
+            onPress={() => navigation.navigate('Dashboard')}>
+            <Text style={Styles.buttonText}>Submit</Text>
           </TouchableOpacity>
         </View>
       </View>

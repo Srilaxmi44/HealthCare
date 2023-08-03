@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 
 const externalStyle = StyleSheet.create({
   ///styles for registerpage2
@@ -99,7 +99,7 @@ const externalStyle = StyleSheet.create({
     marginTop: 15,
   },
   textSignText: {
-    fontSize: 18,
+    fontSize: 22,
     fontWeight: 'bold',
     color: '#fff',
   },
@@ -114,14 +114,14 @@ const externalStyle = StyleSheet.create({
   textPrivate: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    // marginTop: 20,
-    marginBottom: 10,
+    marginBottom: -70,
   },
   color_textPrivate: {
     color: 'grey',
+    marginTop: -60,
   },
   viewContainer: {
-    marginTop: 35,
+    marginTop: 25,
   },
   containerImage: {
     width: '30%',
@@ -129,18 +129,16 @@ const externalStyle = StyleSheet.create({
     // borderRadius: 20,
     marginTop: 10,
     resizeMode: 'fill',
-    marginLeft: 13
-
-
+    marginLeft: 13,
   },
   loginLgo: {
     width: 75,
     height: 70,
     marginLeft: -10,
-    resizeMode: 'fill'
+    resizeMode: 'fill',
   },
   //dropdown
-  dr_viewContainer: { flex: 1, width: '100%', backgroundColor: '#FFF' },
+  dr_viewContainer: {flex: 1, width: '100%', backgroundColor: '#FFF'},
   dr_scrollViewContainer: {
     flexGrow: 1,
     justifyContent: 'space-between',
@@ -159,13 +157,13 @@ const externalStyle = StyleSheet.create({
     marginTop: -30,
     // marginBottom: 100,
   },
-  dr_dropdownBtnTxtStyle: { color: '#444', textAlign: 'left' },
-  dr_dropdownDropdownStyle: { backgroundColor: '#EFEFEF' },
+  dr_dropdownBtnTxtStyle: {color: '#444', textAlign: 'left'},
+  dr_dropdownDropdownStyle: {backgroundColor: '#EFEFEF'},
   dr_dropdownRowStyle: {
     backgroundColor: '#EFEFEF',
     borderBottomColor: '#C5C5C5',
   },
-  dr_dropdownRowTxtStyle: { color: '#444', textAlign: 'left' },
+  dr_dropdownRowTxtStyle: {color: '#444', textAlign: 'left'},
   dr_text_footer: {
     color: '#05375a',
     fontSize: 18,
@@ -226,6 +224,7 @@ const externalStyle = StyleSheet.create({
   },
   buttonText: {
     color: '#fff',
+    fontSize: 14,
     fontWeight: 'bold',
   },
   createAccountButton: {
@@ -233,7 +232,7 @@ const externalStyle = StyleSheet.create({
   },
   createAccountButtonText: {
     color: '#20B2AA',
-    fontSize: 12,
+    fontSize: 14,
     fontWeight: 'bold',
   },
 
@@ -377,7 +376,6 @@ const externalStyle = StyleSheet.create({
   imageEndList: {
     width: 30,
     height: 30,
-
   },
   imageList: {
     width: 45,
@@ -387,10 +385,10 @@ const externalStyle = StyleSheet.create({
   imgEndIconsView: {
     flex: 1,
     justifyContent: 'flex-end',
-    alignItems: 'flex-end'
+    alignItems: 'flex-end',
   },
   textContainerList: {
-    marginLeft: 20
+    marginLeft: 20,
   },
   nameTextList: {
     fontSize: 16,
