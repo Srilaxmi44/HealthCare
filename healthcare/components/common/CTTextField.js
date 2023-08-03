@@ -14,6 +14,8 @@ const cTextField = props => {
           <Feather name={props.fontname} color="#05375a" size={20} />
         )}
         <TextInput
+          inputMode={props.type || 'text'}
+          maxLength={props.max || 200}
           placeholder={props.placeholder}
           style={Styles.textInput}
           autoCapitalize="none"

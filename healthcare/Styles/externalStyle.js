@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 
 const externalStyle = StyleSheet.create({
   ///styles for registerpage2
@@ -104,7 +104,7 @@ const externalStyle = StyleSheet.create({
     color: '#fff',
   },
   loginHeaderView: {
-    paddingBottom: 10
+    paddingBottom: 10,
   },
   textLoginText: {
     fontSize: 22,
@@ -132,7 +132,7 @@ const externalStyle = StyleSheet.create({
   },
 
   //dropdown
-  dr_viewContainer: { flex: 1, width: '100%', backgroundColor: '#FFF' },
+  dr_viewContainer: {flex: 1, width: '100%', backgroundColor: '#FFF'},
   dr_scrollViewContainer: {
     flexGrow: 1,
     justifyContent: 'space-between',
@@ -151,13 +151,13 @@ const externalStyle = StyleSheet.create({
     marginTop: -30,
     // marginBottom: 100,
   },
-  dr_dropdownBtnTxtStyle: { color: '#444', textAlign: 'left' },
-  dr_dropdownDropdownStyle: { backgroundColor: '#EFEFEF' },
+  dr_dropdownBtnTxtStyle: {color: '#444', textAlign: 'left'},
+  dr_dropdownDropdownStyle: {backgroundColor: '#EFEFEF'},
   dr_dropdownRowStyle: {
     backgroundColor: '#EFEFEF',
     borderBottomColor: '#C5C5C5',
   },
-  dr_dropdownRowTxtStyle: { color: '#444', textAlign: 'left' },
+  dr_dropdownRowTxtStyle: {color: '#444', textAlign: 'left'},
   dr_text_footer: {
     color: '#05375a',
     fontSize: 18,
@@ -407,6 +407,26 @@ const externalStyle = StyleSheet.create({
   fontText: {
     fontFamily: 'yarofont',
     fontSize: 20,
+  },
+  otpContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 20,
+  },
+  otpInput: {
+    width: 40,
+    height: 50,
+    borderWidth: 1,
+    borderColor: '#ccc',
+    borderRadius: 8,
+    fontSize: 24,
+    textAlign: 'center',
+    marginHorizontal: 5,
+  },
+  todayStyle: {
+    width: 100,
+    height: 100,
   },
 });
 

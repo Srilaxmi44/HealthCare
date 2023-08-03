@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {
   StyleSheet,
   Text,
@@ -8,14 +8,14 @@ import {
   TouchableOpacity,
   Image,
 } from 'react-native';
-import { Styles } from 'Styles';
-import { CTextBox, CSearch, CTDropdown, CTHeader, CTCheckBox } from 'components';
+import {Styles} from 'Styles';
+import {CTextBox, CSearch, CTDropdown, CTHeader, CTCheckBox} from 'components';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { Logo } from 'assets';
-const Login = ({ navigation }) => {
+import {Logo} from 'assets';
+const Login = ({navigation}) => {
   const [password, setPassword] = useState('');
   const [isPasswordVisible, setPasswordVisible] = useState(false);
-  Icon.loadFont()
+  Icon.loadFont();
   const togglePasswordVisibility = () => {
     setPasswordVisible(!isPasswordVisible);
   };
@@ -27,15 +27,18 @@ const Login = ({ navigation }) => {
       </View> */}
 
       <View style={Styles.containerLogin}>
-        <View style={{ display: 'flex', paddingBottom: 10, justifyContent: 'center' }}>
+        <View
+          style={{
+            display: 'flex',
+            paddingBottom: 10,
+            justifyContent: 'center',
+          }}>
           <View>
-            <Image source={Logo} style={{ height: 50, width: 50 }} />
+            <Image source={Logo} style={{height: 50, width: 50}} />
           </View>
           <View>
             <Text style={Styles.textLoginText}>Login</Text>
           </View>
-
-
         </View>
         <View style={Styles.card}>
           <View style={Styles.mailView}>
@@ -64,12 +67,23 @@ const Login = ({ navigation }) => {
               </View>
             </TouchableOpacity>
           </View>
-          <View style={{ width: '100%', flexDirection: 'row', marginTop: 10 }}>
-            <View style={{ alignSelf: 'flex-start' }}>
+          <View
+            style={{
+              width: '100%',
+              flexDirection: 'row',
+              marginTop: 10,
+            }}>
+            <View style={{alignSelf: 'flex-start'}}>
               <CTCheckBox />
-
             </View>
-            <View style={{ justifyContent: 'center', alignContent: 'flex-end', alignItems: 'flex-end', textAlign: 'right', flex: 1 }}>
+            <View
+              style={{
+                justifyContent: 'center',
+                alignContent: 'flex-end',
+                alignItems: 'flex-end',
+                textAlign: 'right',
+                flex: 1,
+              }}>
               <TouchableOpacity
                 style={Styles.forgotPasswordButton}
                 onPress={() => navigation.navigate('ForgotPassword')}>
@@ -77,7 +91,6 @@ const Login = ({ navigation }) => {
               </TouchableOpacity>
             </View>
           </View>
-
 
           <TouchableOpacity
             style={Styles.buttonLogin}
@@ -91,7 +104,7 @@ const Login = ({ navigation }) => {
             <Text style={Styles.createAccountButtonText}>Register</Text>
           </TouchableOpacity>
         </View>
-      </View >
+      </View>
     </>
   );
 };
