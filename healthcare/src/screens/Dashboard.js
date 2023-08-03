@@ -16,7 +16,7 @@ const Dashboard = ({ navigation }) => {
 
     return (
         <View>
-            <CTSearchList title={'Doctors List'} />
+            <CTSearchList title={'Search Available Doctors'} />
         </View>
     );
 };

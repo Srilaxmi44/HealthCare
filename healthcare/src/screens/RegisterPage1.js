@@ -9,13 +9,14 @@ import {
 } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 import LinearGradient from 'react-native-linear-gradient';
-import {CTextBox, CSearch, CTDropdown} from 'components';
-import {Styles} from 'Styles';
+import { CTextBox, CSearch, CTDropdown } from 'components';
+import { Styles } from 'Styles';
 import Icon from '../../assets/Images/Original.png';
 import jsonData from '../../assets/data/CTdropdownData.json';
+import { Logo } from 'assets';
 console.log('jsonData', jsonData);
 
-const RegisterPage1 = ({navigation}) => {
+const RegisterPage1 = ({ navigation }) => {
   const [data, setData] = React.useState({
     firstName: '',
     lastName: '',
@@ -31,8 +32,9 @@ const RegisterPage1 = ({navigation}) => {
       <View style={Styles.header}>
         <Image
           // source={{uri: Icon}}
-          source={require('../../assets/Images/Original.png')}
+          source={Logo}
           style={Styles.containerImage}
+
         />
         <Text style={Styles.text_header}>Register Now!</Text>
       </View>
@@ -72,7 +74,7 @@ const RegisterPage1 = ({navigation}) => {
             <CTextBox
               title="Gender"
               placeholder="Your  Gender"
-              // fontname="user"
+            // fontname="user"
             />
           </View>
 
@@ -97,16 +99,16 @@ const RegisterPage1 = ({navigation}) => {
             <Text style={Styles.color_textPrivate}>
               By signing up you agree to our
             </Text>
-            <Text style={[Styles.color_textPrivate, {fontWeight: 'bold'}]}>
+            <Text style={[Styles.color_textPrivate, { fontWeight: 'bold' }]}>
               Terms of service
             </Text>
             <Text style={Styles.color_textPrivate}> and</Text>
-            <Text style={[Styles.color_textPrivate, {fontWeight: 'bold'}]}>
+            <Text style={[Styles.color_textPrivate, { fontWeight: 'bold' }]}>
               Privacy policy
             </Text>
           </View>
           <View style={Styles.button}>
-            <TouchableOpacity style={Styles.signIn} onPress={() => {}}>
+            <TouchableOpacity style={Styles.signIn} onPress={() => { }}>
               <LinearGradient
                 colors={['#08d4c4', '#01ab9d']}
                 style={Styles.signIn}>

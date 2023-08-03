@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 
 const externalStyle = StyleSheet.create({
   ///styles for registerpage2
@@ -45,7 +45,7 @@ const externalStyle = StyleSheet.create({
     flex: 1,
     justifyContent: 'flex-end',
     paddingHorizontal: 20,
-    paddingBottom: 50,
+    paddingBottom: 10,
   },
   footer: {
     flex: Platform.OS === 'ios' ? 3 : 5,
@@ -62,14 +62,14 @@ const externalStyle = StyleSheet.create({
   },
   text_footer: {
     color: '#05375a',
-    fontSize: 18,
+    fontSize: 15,
   },
   action: {
     flexDirection: 'row',
     marginTop: 10,
     borderBottomWidth: 1,
     borderBottomColor: '#f2f2f2',
-    paddingBottom: 5,
+    // paddingBottom: 5,
   },
   textInput: {
     flex: 1,
@@ -124,15 +124,17 @@ const externalStyle = StyleSheet.create({
     marginTop: 35,
   },
   containerImage: {
-    width: '60%',
-    height: '40%',
+    width: '40%',
+    height: '69%',
     // borderRadius: 20,
     marginTop: 10,
-    backgroundColor: 'red',
+    resizeMode: 'fill',
+
+
   },
 
   //dropdown
-  dr_viewContainer: {flex: 1, width: '100%', backgroundColor: '#FFF'},
+  dr_viewContainer: { flex: 1, width: '100%', backgroundColor: '#FFF' },
   dr_scrollViewContainer: {
     flexGrow: 1,
     justifyContent: 'space-between',
@@ -151,13 +153,13 @@ const externalStyle = StyleSheet.create({
     marginTop: -30,
     // marginBottom: 100,
   },
-  dr_dropdownBtnTxtStyle: {color: '#444', textAlign: 'left'},
-  dr_dropdownDropdownStyle: {backgroundColor: '#EFEFEF'},
+  dr_dropdownBtnTxtStyle: { color: '#444', textAlign: 'left' },
+  dr_dropdownDropdownStyle: { backgroundColor: '#EFEFEF' },
   dr_dropdownRowStyle: {
     backgroundColor: '#EFEFEF',
     borderBottomColor: '#C5C5C5',
   },
-  dr_dropdownRowTxtStyle: {color: '#444', textAlign: 'left'},
+  dr_dropdownRowTxtStyle: { color: '#444', textAlign: 'left' },
   dr_text_footer: {
     color: '#05375a',
     fontSize: 18,
@@ -231,7 +233,7 @@ const externalStyle = StyleSheet.create({
 
   passwordView: {
     width: 300,
-    marginTop: 35,
+    marginTop: 20,
   },
   eyeIconView: {
     marginTop: -45,
@@ -320,20 +322,21 @@ const externalStyle = StyleSheet.create({
   text_headerSearch: {
     color: 'black',
     fontWeight: 'bold',
-    fontSize: 20,
+    fontSize: 15,
     marginBottom: 10,
   },
   searchContainer: {
     backgroundColor: 'white',
     padding: 8,
-    marginTop: 50,
+    marginTop: 10,
   },
   searchInput: {
-    height: 40,
-    borderColor: 'gray',
+    height: 35,
+    borderColor: 'lightgray',
     borderWidth: 1,
     padding: 8,
     paddingTop: 10,
+    borderRadius: 7,
   },
   itemContainerSearch: {
     flex: 1,
@@ -353,29 +356,35 @@ const externalStyle = StyleSheet.create({
   //CTListItems
   containerList: {
     backgroundColor: '#fff',
-    paddingBottom: '100%',
+    paddingBottom: '70%',
   },
   itemContainerList: {
+    display: 'flex',
     flex: 1,
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    //justifyContent: 'space-between',
     alignItems: 'center',
-    padding: 16,
+    padding: 15,
     borderBottomWidth: 1,
     borderBottomColor: '#eee',
   },
   imageEndList: {
-    width: 60,
-    height: 60,
-    borderRadius: 30,
+    width: 30,
+    height: 30,
+
   },
   imageList: {
-    width: 60,
-    height: 60,
+    width: 45,
+    height: 45,
     borderRadius: 30,
   },
+  imgEndIconsView: {
+    flex: 1,
+    justifyContent: 'flex-end',
+    alignItems: 'flex-end'
+  },
   textContainerList: {
-    marginRight: 60,
+    marginLeft: 20
   },
   nameTextList: {
     fontSize: 16,

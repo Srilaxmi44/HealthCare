@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   StyleSheet,
   Text,
@@ -8,11 +8,11 @@ import {
   TouchableOpacity,
   Image,
 } from 'react-native';
-import {Styles} from 'Styles';
-import {CTextBox, CSearch, CTDropdown, CTHeader, CTCheckBox} from 'components';
+import { Styles } from 'Styles';
+import { CTextBox, CSearch, CTDropdown, CTHeader, CTCheckBox } from 'components';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import {Logo} from 'assets';
-const Login = ({navigation}) => {
+import { Logo } from 'assets';
+const Login = ({ navigation }) => {
   const [password, setPassword] = useState('');
   const [isPasswordVisible, setPasswordVisible] = useState(false);
   Icon.loadFont();
@@ -34,7 +34,7 @@ const Login = ({navigation}) => {
             justifyContent: 'center',
           }}>
           <View>
-            <Image source={Logo} style={{height: 50, width: 50}} />
+            <Image source={Logo} style={{ height: 50, width: 50 }} />
           </View>
           <View>
             <Text style={Styles.textLoginText}>Login</Text>
@@ -43,7 +43,7 @@ const Login = ({navigation}) => {
         <View style={Styles.card}>
           <View style={Styles.mailView}>
             <CTextBox
-              title="Login"
+              title="Email"
               placeholder="Enter  Email"
               fontname="mail"
             />
@@ -62,7 +62,7 @@ const Login = ({navigation}) => {
               <View style={Styles.eyeIconView}>
                 <Icon
                   name={isPasswordVisible ? 'eye' : 'eye-slash'}
-                  size={24}
+                  size={22}
                 />
               </View>
             </TouchableOpacity>
@@ -73,7 +73,7 @@ const Login = ({navigation}) => {
               flexDirection: 'row',
               marginTop: 10,
             }}>
-            <View style={{alignSelf: 'flex-start'}}>
+            <View style={{ alignSelf: 'flex-start', paddingTop: 7, paddingBottom: 7 }}>
               <CTCheckBox />
             </View>
             <View
