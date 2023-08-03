@@ -227,6 +227,16 @@ const externalStyle = StyleSheet.create({
     fontSize: 14,
     fontWeight: 'bold',
   },
+  buttonLink: {
+    backgroundColor: '#20B2AA',
+    borderRadius: 5,
+    padding: 10,
+    marginTop: 10,
+    width: '25%',
+    alignItems: 'flex-end',
+    marginLeft: 250,
+    justifyContent: 'flex-end',
+  },
   createAccountButton: {
     marginTop: 20,
   },

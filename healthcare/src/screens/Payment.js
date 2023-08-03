@@ -246,7 +246,7 @@ const Payment = ({navigation}) => {
               max={10}
             />
 
-            <TouchableOpacity style={Styles.buttonLogin}>
+            <TouchableOpacity style={Styles.buttonLink}>
               <Text style={Styles.buttonText}>Send OTP</Text>
             </TouchableOpacity>
           </View>
