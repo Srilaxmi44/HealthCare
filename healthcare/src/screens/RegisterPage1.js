@@ -13,7 +13,7 @@ import { CTextBox, CSearch, CTDropdown } from 'components';
 import { Styles } from 'Styles';
 import Icon from '../../assets/Images/Original.png';
 import jsonData from '../../assets/data/CTdropdownData.json';
-import { Logo } from 'assets';
+import { headerWhiteBG } from 'assets';
 console.log('jsonData', jsonData);
 
 const RegisterPage1 = ({ navigation }) => {
@@ -32,7 +32,7 @@ const RegisterPage1 = ({ navigation }) => {
       <View style={Styles.header}>
         <Image
           // source={{uri: Icon}}
-          source={Logo}
+          source={headerWhiteBG}
           style={Styles.containerImage}
 
         />

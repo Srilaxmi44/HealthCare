@@ -124,8 +124,8 @@ const externalStyle = StyleSheet.create({
     marginTop: 35,
   },
   containerImage: {
-    width: '40%',
-    height: '69%',
+    width: '30%',
+    height: '65%',
     // borderRadius: 20,
     marginTop: 10,
     resizeMode: 'fill',
