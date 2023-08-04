@@ -94,7 +94,7 @@ const RegisterPage1 = ({navigation}) => {
             />
           </View>
 
-          <View style={Styles.textPrivate}>
+          {/* <View style={Styles.textPrivate}>
             <Text style={Styles.color_textPrivate}>
               By signing up you agree to our
             </Text>
@@ -113,23 +113,33 @@ const RegisterPage1 = ({navigation}) => {
               ]}>
               Privacy policy
             </Text>
-          </View>
-          <View style={Styles.button}>
-            <TouchableOpacity
-              style={Styles.signIn}
-              onPress={() => navigation.navigate('Payment')}>
-              <LinearGradient
-                colors={['#08d4c4', '#01ab9d']}
-                style={Styles.signIn}>
-                <Text style={Styles.textSignText}>Register</Text>
-              </LinearGradient>
-            </TouchableOpacity>
+          </View> */}
+          <View style={{marginTop: -60}}>
+            <View style={Styles.textPrivate}>
+              <Text>
+                By signing up you agree to our{' '}
+                <Text style={Styles.privateTextView}>Terms of service</Text> and{' '}
+                <Text style={Styles.privateTextView}>Privacy policy</Text>
+              </Text>
+            </View>
 
-            <TouchableOpacity
-              onPress={() => navigation.goBack()}
-              style={Styles.touchableView_login}>
-              <Text style={Styles.textLoginText}>Log In</Text>
-            </TouchableOpacity>
+            <View style={Styles.button}>
+              <TouchableOpacity
+                style={Styles.signIn}
+                onPress={() => navigation.navigate('Payment')}>
+                <LinearGradient
+                  colors={['#08d4c4', '#01ab9d']}
+                  style={Styles.signIn}>
+                  <Text style={Styles.textSignText}>Register</Text>
+                </LinearGradient>
+              </TouchableOpacity>
+
+              <TouchableOpacity
+                onPress={() => navigation.goBack()}
+                style={Styles.touchableView_login}>
+                <Text style={Styles.textLoginText}>Log In</Text>
+              </TouchableOpacity>
+            </View>
           </View>
         </ScrollView>
       </Animatable.View>

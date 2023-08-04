@@ -14,9 +14,10 @@
 
 // export default CTCheckBox;
 
-import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import React, {useState} from 'react';
+import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import {Styles} from 'Styles';
 
 function CTCheckBox() {
   const [isChecked, setIsChecked] = useState(false);
@@ -27,35 +28,19 @@ function CTCheckBox() {
   };
 
   return (
-    <TouchableOpacity onPress={handleCheckboxToggle} style={styles.container}>
-      <View style={styles.checkboxContainer}>
+    <TouchableOpacity
+      onPress={handleCheckboxToggle}
+      style={Styles.containerCheckBox}>
+      <View style={Styles.containerCheckBoxView}>
         {isChecked ? (
           <Icon name="check-box" size={22} />
         ) : (
           <Icon name="check-box-outline-blank" size={22} color="gray" />
         )}
       </View>
-      <Text style={styles.label}>Remember me</Text>
+      <Text style={Styles.containerCheckBoxLabel}>Remember me</Text>
     </TouchableOpacity>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  checkboxContainer: {
-    width: 24,
-    height: 24,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  label: {
-    marginLeft: 5,
-    fontSize: 16,
-    color: 'gray'
-  },
-});
 
 export default CTCheckBox;

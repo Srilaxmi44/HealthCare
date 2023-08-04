@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 
 const externalStyle = StyleSheet.create({
   ///styles for registerpage2
@@ -79,7 +79,7 @@ const externalStyle = StyleSheet.create({
   },
   button: {
     alignItems: 'center',
-    marginTop: 50,
+    marginTop: 5,
   },
   signIn: {
     width: '100%',
@@ -114,11 +114,11 @@ const externalStyle = StyleSheet.create({
   textPrivate: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    flex: 1
+    marginBottom: 10,
   },
   color_textPrivate: {
     color: 'grey',
-    // marginTop: -60,
+    marginTop: -60,
   },
   viewContainer: {
     marginTop: 25,
@@ -137,8 +137,13 @@ const externalStyle = StyleSheet.create({
     marginLeft: -10,
     resizeMode: 'fill',
   },
+  privateTextView: {
+    color: '#0078D4',
+    fontWeight: 'bold',
+  },
+
   //dropdown
-  dr_viewContainer: { flex: 1, width: '100%', backgroundColor: '#FFF' },
+  dr_viewContainer: {flex: 1, width: '100%', backgroundColor: '#FFF'},
   dr_scrollViewContainer: {
     flexGrow: 1,
     justifyContent: 'space-between',
@@ -157,23 +162,29 @@ const externalStyle = StyleSheet.create({
     marginTop: -30,
     // marginBottom: 100,
   },
-  dr_dropdownBtnTxtStyle: { color: '#444', textAlign: 'left' },
-  dr_dropdownDropdownStyle: { backgroundColor: '#EFEFEF' },
+  dr_dropdownBtnTxtStyle: {color: '#444', textAlign: 'left'},
+  dr_dropdownDropdownStyle: {backgroundColor: '#EFEFEF'},
   dr_dropdownRowStyle: {
     backgroundColor: '#EFEFEF',
     borderBottomColor: '#C5C5C5',
   },
-  dr_dropdownRowTxtStyle: { color: '#444', textAlign: 'left' },
+  dr_dropdownRowTxtStyle: {color: '#444', textAlign: 'left'},
   dr_text_footer: {
     color: '#05375a',
     fontSize: 18,
   },
+
   // login page
   containerLogin: {
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
     height: '100%',
+  },
+  containerLoginImageView: {
+    display: 'flex',
+    paddingBottom: 10,
+    justifyContent: 'center',
   },
   iconHeader: {
     width: '80%',
@@ -258,6 +269,24 @@ const externalStyle = StyleSheet.create({
   mailView: {
     width: 300,
   },
+  checkBoxContainer: {
+    width: '100%',
+    flexDirection: 'row',
+    marginTop: 10,
+  },
+  checkBoxContainerView: {
+    alignSelf: 'flex-start',
+    paddingTop: 7,
+    paddingBottom: 7,
+  },
+  forgotView: {
+    justifyContent: 'center',
+    alignContent: 'flex-end',
+    alignItems: 'flex-end',
+    textAlign: 'right',
+    flex: 1,
+  },
+
   //forgot Page
   containerMainForgot: {
     flex: 1,
@@ -450,6 +479,22 @@ const externalStyle = StyleSheet.create({
   todayStyle: {
     width: 100,
     height: 100,
+  },
+  //checkBox
+  containerCheckBox: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  containerCheckBoxView: {
+    width: 24,
+    height: 24,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  containerCheckBoxLabel: {
+    marginLeft: 5,
+    fontSize: 16,
+    color: 'gray',
   },
 });
 

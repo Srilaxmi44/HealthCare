@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {
   StyleSheet,
   Text,
@@ -8,11 +8,11 @@ import {
   TouchableOpacity,
   Image,
 } from 'react-native';
-import { Styles } from 'Styles';
-import { CTextBox, CSearch, CTDropdown, CTHeader, CTCheckBox } from 'components';
+import {Styles} from 'Styles';
+import {CTextBox, CSearch, CTDropdown, CTHeader, CTCheckBox} from 'components';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { Logo } from 'assets';
-const Login = ({ navigation }) => {
+import {Logo} from 'assets';
+const Login = ({navigation}) => {
   const [password, setPassword] = useState('');
   const [isPasswordVisible, setPasswordVisible] = useState(false);
   Icon.loadFont();
@@ -27,12 +27,7 @@ const Login = ({ navigation }) => {
       </View> */}
 
       <View style={Styles.containerLogin}>
-        <View
-          style={{
-            display: 'flex',
-            paddingBottom: 10,
-            justifyContent: 'center',
-          }}>
+        <View style={Styles.containerLoginImageView}>
           <View>
             <Image source={Logo} style={Styles.loginLgo} />
           </View>
@@ -67,23 +62,12 @@ const Login = ({ navigation }) => {
               </View>
             </TouchableOpacity>
           </View>
-          <View
-            style={{
-              width: '100%',
-              flexDirection: 'row',
-              marginTop: 10,
-            }}>
-            <View style={{ alignSelf: 'flex-start', paddingTop: 7, paddingBottom: 7 }}>
+          <View style={Styles.checkBoxContainer}>
+            <View style={Styles.checkBoxContainerView}>
               <CTCheckBox />
             </View>
-            <View
-              style={{
-                justifyContent: 'center',
-                alignContent: 'flex-end',
-                alignItems: 'flex-end',
-                textAlign: 'right',
-                flex: 1,
-              }}>
+
+            <View style={Styles.forgotView}>
               <TouchableOpacity
                 style={Styles.forgotPasswordButton}
                 onPress={() => navigation.navigate('ForgotPassword')}>
@@ -98,10 +82,16 @@ const Login = ({ navigation }) => {
             <Text style={Styles.buttonText}>Login</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity
+          {/* <TouchableOpacity
             style={Styles.createAccountButton}
             onPress={() => navigation.navigate('RegisterPage')}>
             <Text style={Styles.createAccountButtonText}>Register</Text>
+          </TouchableOpacity> */}
+
+          <TouchableOpacity
+            style={Styles.buttonLogin}
+            onPress={() => navigation.navigate('RegisterPage')}>
+            <Text style={Styles.buttonText}>Register</Text>
           </TouchableOpacity>
         </View>
       </View>

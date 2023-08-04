@@ -9,6 +9,7 @@ import Dashboard from 'src/screens/Dashboard';
 import Payment from 'src/screens/Payment';
 import PaySubmit from 'src/screens/PaySubmit';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import {TouchableOpacity} from 'react-native';
 import {
   Image,
   StyleSheet,
@@ -28,7 +29,7 @@ function LogoTitle() {
     />
   );
 }
-function Navigation() {
+function Navigation({navigation}) {
   return (
     <NavigationContainer>
       <Stack.Navigator>
@@ -57,11 +58,19 @@ function Navigation() {
         <Stack.Screen
           name="Dashboard"
           component={Dashboard}
-          options={{
+          options={({navigation}) => ({
             headerBackTitle: '',
             headerBackTitleVisible: false,
 
             headerBackImage: () => <Icon name={'arrowLeft'} />,
+            headerRight: () => (
+              <TouchableOpacity
+                style={{marginRight: 15}}
+                onPress={() => navigation.navigate('Login')}>
+                <Icon name={'sign-out'} size={24} color={'#fff'} />
+              </TouchableOpacity>
+            ),
+
             headerTintColor: '#fff',
             headerStyle: {
               backgroundColor: '#20b2aa',
@@ -70,7 +79,7 @@ function Navigation() {
               color: '#fff',
               fontWeight: 'bold',
             },
-          }}
+          })}
         />
         <Stack.Screen
           name="RegisterPage"
