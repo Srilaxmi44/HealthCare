@@ -8,6 +8,7 @@ import ForgotPassword from 'src/screens/ForgotPassword';
 import Dashboard from 'src/screens/Dashboard';
 import Payment from 'src/screens/Payment';
 import PaySubmit from 'src/screens/PaySubmit';
+import VideoScreen from 'src/screens/VideoScreen';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {TouchableOpacity} from 'react-native';
 import {
@@ -109,6 +110,12 @@ function Navigation({navigation}) {
             },
             // headerBackground: (props) => <LogoTitle {...props} />
           }}
+        />
+
+        <Stack.Screen
+          name="VideoScreen"
+          component={VideoScreen}
+          options={{headerShown: false}}
         />
       </Stack.Navigator>
     </NavigationContainer>

@@ -89,13 +89,13 @@ const externalStyle = StyleSheet.create({
     borderRadius: 10,
   },
   touchableView_login: {
-    width: '100%',
-    height: 50,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 10,
-    borderColor: '#009387',
-    borderWidth: 1,
+    // width: '100%',
+    // height: 50,
+    // justifyContent: 'center',
+    // alignItems: 'center',
+    // borderRadius: 10,
+    // // borderColor: '#009387',
+    // borderWidth: 1,
     marginTop: 15,
   },
   textSignText: {
@@ -153,7 +153,7 @@ const externalStyle = StyleSheet.create({
   },
   dr_dropdownBtnStyle: {
     width: '100%',
-    height: 50,
+    height: 40,
     backgroundColor: '#FFF',
     borderRadius: 8,
     borderWidth: 1,
@@ -233,8 +233,21 @@ const externalStyle = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
   },
+  buttonLogin_ContainerRegister: {
+    // backgroundColor: '#20B2AA',
+    borderRadius: 5,
+    padding: 10,
+    marginTop: 10,
+    width: '100%',
+    alignItems: 'center',
+  },
   buttonText: {
     color: '#fff',
+    fontSize: 14,
+    fontWeight: 'bold',
+  },
+  buttonLogin_ContainerRegisterText: {
+    color: '#20B2AA',
     fontSize: 14,
     fontWeight: 'bold',
   },
@@ -406,7 +419,7 @@ const externalStyle = StyleSheet.create({
     display: 'flex',
     flex: 1,
     flexDirection: 'row',
-    //justifyContent: 'space-between',
+    justifyContent: 'space-between',
     alignItems: 'center',
     padding: 15,
     borderBottomWidth: 1,
@@ -495,6 +508,45 @@ const externalStyle = StyleSheet.create({
     marginLeft: 5,
     fontSize: 16,
     color: 'gray',
+  },
+
+  //modal popup
+  Modal_modalContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  },
+  Modal_modalContent: {
+    backgroundColor: 'white',
+    padding: 40,
+    borderRadius: 10,
+    width: '80%',
+  },
+  Modal_modalContentText: {
+    fontSize: 20,
+    color: '#000',
+    fontWeight: 'bold',
+  },
+
+  Modal_buttonContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginTop: 10,
+  },
+  Modal_button: {
+    marginHorizontal: 30,
+    paddingVertical: 10,
+    paddingHorizontal: 30,
+    backgroundColor: '#20B2AA',
+    borderRadius: 25,
+    width: 100,
+  },
+  Modal_buttonText: {
+    color: 'white',
+    textAlign: 'center',
+    fontWeight: 'bold',
+    fontSize: 20,
   },
 });
 
