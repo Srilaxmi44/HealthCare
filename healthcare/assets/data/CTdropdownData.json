@@ -12,5 +12,7 @@
     "Saudi Arabia",
     "Argentina",
     "India"
-  ]
+  ],
+  "Injury": ["normal", "medium", "Big"],
+  "BodyPart": ["legs", "hand", "head", "neck"]
 }

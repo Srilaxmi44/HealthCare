@@ -41,6 +41,7 @@ const Login = ({navigation}) => {
               title="Email"
               placeholder="Enter  Email"
               fontname="mail"
+              inputContainerStyle={Styles.customInputContainer}
             />
           </View>
 
@@ -52,6 +53,7 @@ const Login = ({navigation}) => {
               secureTextEntry={!isPasswordVisible}
               value={password}
               onChangeText={setPassword}
+              inputContainerStyle={Styles.customInputContainer}
             />
             <TouchableOpacity onPress={togglePasswordVisibility}>
               <View style={Styles.eyeIconView}>

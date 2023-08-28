@@ -1,23 +1,12 @@
 /* eslint-disable no-undef */
 import React from 'react';
-import {
-  View,
-  Text,
-  SafeAreaView,
-  StatusBar,
-  Dimensions,
-  StyleSheet,
-  ScrollView,
-  Image,
-} from 'react-native';
-const {width} = Dimensions.get('window');
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import Ionicons from 'react-native-vector-icons/Ionicons';
+import {View, Text, ScrollView} from 'react-native';
 import SelectDropdown from 'react-native-select-dropdown';
-import {Styles} from 'Styles';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import Styles from './CTStyleDropDown';
 
-export default CTDropdown = props => {
-  console.log('propsData', props.data.countries);
+const CTDropdown = props => {
+  console.log('Hello drop', props.data.countries);
   return (
     <View style={Styles.dr_viewContainer}>
       <Text style={Styles.dr_text_footer}>{props.title}</Text>
@@ -28,7 +17,7 @@ export default CTDropdown = props => {
         <SelectDropdown
           data={props.data.countries}
           onSelect={(selectedItem, index) => {
-            console.log(selectedItem, index);
+            props.onDropdownChange(selectedItem); // Call the provided callback
           }}
           defaultButtonText={props.defaultButtonText}
           buttonTextAfterSelection={(selectedItem, index) => {
@@ -57,3 +46,5 @@ export default CTDropdown = props => {
     </View>
   );
 };
+
+export default CTDropdown;

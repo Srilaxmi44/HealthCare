@@ -9,12 +9,12 @@ import {
 } from 'react-native';
 import {Styles} from 'Styles';
 
-const CTModal = ({isModalVisible, handleAvailabilityResponse}) => (
+const CTModal = props => (
   <Modal
-    visible={isModalVisible}
+    visible={props.isModalVisible}
     animationType="slide"
     transparent={true}
-    onRequestClose={() => handleAvailabilityResponse(false)}>
+    onRequestClose={() => props.handleAvailabilityResponse(false)}>
     <View style={Styles.Modal_modalContainer}>
       <View style={Styles.Modal_modalContent}>
         <Text style={Styles.Modal_modalContentText}>
@@ -23,12 +23,12 @@ const CTModal = ({isModalVisible, handleAvailabilityResponse}) => (
         <View style={Styles.Modal_buttonContainer}>
           <TouchableOpacity
             style={Styles.Modal_button}
-            onPress={() => handleAvailabilityResponse(true)}>
+            onPress={() => props.handleAvailabilityResponse(true)}>
             <Text style={Styles.Modal_buttonText}>Yes</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={Styles.Modal_button}
-            onPress={() => handleAvailabilityResponse(false)}>
+            onPress={() => props.handleAvailabilityResponse(false)}>
             <Text style={Styles.Modal_buttonText}>No</Text>
           </TouchableOpacity>
         </View>

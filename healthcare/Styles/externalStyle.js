@@ -2,7 +2,7 @@ import {StyleSheet} from 'react-native';
 
 const externalStyle = StyleSheet.create({
   ///styles for registerpage2
-  container: {
+  containerTop: {
     elevation: 10,
     backgroundColor: 'white',
     borderRadius: 10,
@@ -16,6 +16,11 @@ const externalStyle = StyleSheet.create({
     fontWeight: 'bold',
     color: '#03bafc',
     textAlign: 'center',
+  },
+  TextInputContainer: {
+    marginBottom: 30,
+    marginTop: 2,
+    marginBottom: -30,
   },
   footer_container: {
     borderRadius: 100,
@@ -35,6 +40,13 @@ const externalStyle = StyleSheet.create({
     fontSize: 16,
     textAlign: 'center',
   },
+  customInputContainer: {
+    // Define your custom input container styles here
+    flexDirection: 'row',
+    borderBottomWidth: 1,
+    borderColor: 'grey', // Black bottom border
+    alignItems: 'center',
+  },
 
   ///dummy
   container: {
@@ -46,6 +58,7 @@ const externalStyle = StyleSheet.create({
     justifyContent: 'flex-end',
     paddingHorizontal: 20,
     paddingBottom: 10,
+    // backgroundColor: '#009387',
   },
   footer: {
     flex: Platform.OS === 'ios' ? 3 : 5,
@@ -143,7 +156,7 @@ const externalStyle = StyleSheet.create({
   },
 
   //dropdown
-  dr_viewContainer: {flex: 1, width: '100%', backgroundColor: '#FFF'},
+  dr_viewContainer: {flex: 1, width: '100%'},
   dr_scrollViewContainer: {
     flexGrow: 1,
     justifyContent: 'space-between',
@@ -535,7 +548,7 @@ const externalStyle = StyleSheet.create({
     marginTop: 10,
   },
   Modal_button: {
-    marginHorizontal: 30,
+    marginHorizontal: 15,
     paddingVertical: 10,
     paddingHorizontal: 30,
     backgroundColor: '#20B2AA',
@@ -547,6 +560,55 @@ const externalStyle = StyleSheet.create({
     textAlign: 'center',
     fontWeight: 'bold',
     fontSize: 20,
+  },
+
+  //video call
+  VideoContainer: {
+    flex: 1,
+    flexDirection: 'column',
+    paddingHorizontal: 100,
+    paddingVertical: 50,
+  },
+  VideoOTPublisherContainerView: {
+    marginTop: -40,
+  },
+  VideoOTPublisher: {
+    width: '200%',
+    height: 300,
+    marginLeft: -95,
+    marginBottom: 200,
+  },
+  VideoMicContainer: {
+    position: 'absolute',
+    bottom: 10,
+    right: -90,
+  },
+  VideoCameraFlipContainer: {
+    position: 'absolute',
+    bottom: 10,
+    right: -60,
+    color: 'blue',
+  },
+  VideoOTPublisher: {
+    width: '200%',
+    height: '100%',
+    marginLeft: -95,
+    marginTop: -200,
+  },
+  VideoButtonEndContainer: {
+    position: 'absolute',
+    bottom: 20,
+    right: 100,
+  },
+  VideoButtonEndContainerView: {
+    backgroundColor: 'red',
+    width: '100%',
+    borderRadius: 10,
+    padding: 10,
+    left: 20,
+  },
+  videoContainerElements: {
+    marginBottom: 500,
   },
 });
 
