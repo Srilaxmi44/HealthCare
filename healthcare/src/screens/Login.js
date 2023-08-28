@@ -7,32 +7,68 @@ import {
   TextInput,
   TouchableOpacity,
   Image,
+  Alert,
 } from 'react-native';
-import {Styles} from 'Styles';
-import {CTextBox, CSearch, CTDropdown, CTHeader, CTCheckBox} from 'components';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {Logo} from 'assets';
+
 const Login = ({navigation}) => {
-  const [password, setPassword] = useState('');
   const [isPasswordVisible, setPasswordVisible] = useState(false);
+  const [data, setData] = useState({
+    Email: '',
+    Password: '',
+  });
+
   Icon.loadFont();
+
   const togglePasswordVisibility = () => {
     setPasswordVisible(!isPasswordVisible);
   };
 
+  console.log('Current state of data:', data);
+
+  const handleLogin = () => {
+    if (!data.Email || !data.Password) {
+      Alert.alert('Validation Error', 'All fields are required.');
+      return;
+    }
+
+    const postData = {
+      email: data.Email,
+      password: data.Password,
+    };
+
+    const apiEndpoint = 'http://192.168.1.5:8080/users/auth'; // Replace with your actual API endpoint
+
+    fetch(apiEndpoint, {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(postData),
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log('API Response:', data);
+        navigation.navigate('Home'); // Navigate to Home or any other page after successful login
+        Alert.alert('Success', 'Login successful!');
+      })
+      .catch(error => {
+        console.error('API Error:', error);
+        Alert.alert('Error', 'Login failed. Please try again.');
+      });
+  };
+
   return (
     <>
-      {/* <View>
-        <CTHeader />
-      </View> */}
-
       <View style={Styles.containerLogin}>
         <View style={Styles.containerLoginImageView}>
           <View>
             <Image source={Logo} style={Styles.loginLgo} />
           </View>
           <View>
-            <Text style={Styles.textLoginText}>Login</Text>
+            <Text style={Styles.textLoginText}>Hello America</Text>
           </View>
         </View>
         <View style={Styles.card}>
@@ -41,6 +77,7 @@ const Login = ({navigation}) => {
               title="Email"
               placeholder="Enter  Email"
               fontname="mail"
+              onChangeText={text => setData({...data, Email: text})}
               inputContainerStyle={Styles.customInputContainer}
             />
           </View>
@@ -52,7 +89,7 @@ const Login = ({navigation}) => {
               fontname="lock"
               secureTextEntry={!isPasswordVisible}
               value={password}
-              onChangeText={setPassword}
+              onChangeText={text => setData({...data, Password: text})}
               inputContainerStyle={Styles.customInputContainer}
             />
             <TouchableOpacity onPress={togglePasswordVisibility}>
@@ -78,21 +115,17 @@ const Login = ({navigation}) => {
             </View>
           </View>
 
-          <TouchableOpacity
-            style={Styles.buttonLogin}
-            onPress={() => navigation.navigate('Dashboard')}>
+          <TouchableOpacity style={Styles.buttonLogin} onPress={handleRegister}>
             <Text style={Styles.buttonText}>Login</Text>
           </TouchableOpacity>
 
           {/* <TouchableOpacity
-            style={Styles.createAccountButton}
-            onPress={() => navigation.navigate('RegisterPage')}>
-            <Text style={Styles.createAccountButtonText}>Register</Text>
-          </TouchableOpacity> */}
+                style={Styles.createAccountButton}
+                onPress={() => navigation.navigate('RegisterPage')}>
+                <Text style={Styles.createAccountButtonText}>Register</Text>
+              </TouchableOpacity> */}
 
-          <TouchableOpacity
-            style={Styles.buttonLogin_ContainerRegister}
-            onPress={() => navigation.navigate('RegisterPage')}>
+          <TouchableOpacity style={Styles.buttonLogin_ContainerRegister}>
             <Text style={Styles.buttonLogin_ContainerRegisterText}>
               Register
             </Text>

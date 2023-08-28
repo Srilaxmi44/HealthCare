@@ -498,6 +498,7 @@ import {OTSession, OTPublisher, OTSubscriber} from 'opentok-react-native';
 import {useNavigation} from '@react-navigation/native';
 import {CTDropdown, CTextBox, CTTextArea, CTDatePicker} from 'components';
 import dataJson from '../../assets/data/CTdropdownData.json';
+console.log('hello india', dataJson);
 
 function VideoScreen() {
   const navigation = useNavigation();
@@ -561,50 +562,47 @@ function VideoScreen() {
         </View>
 
         <View style={styles.textColumn}>
-          <ScrollView>
-            <CTextBox
-              title="First Name"
-              borderStyle={{
-                borderWidth: 1,
-                borderColor: 'black',
-                backgroundColor: 'white',
-                borderRadius: 50,
-                borderRadius: 10,
-              }}
-            />
+          <View style={styles.card}>
+            <ScrollView>
+              {/* First Name */}
 
-            <View style={{marginTop: 10}}>
+              <CTextBox title="First Name" borderStyle={styles.cardContent} />
+
+              {/* Prescription */}
+
               <CTTextArea title="Prescription" />
-            </View>
 
-            <View style={{marginBottom: -35}}>
-              {/* <CTDropdown data={dataJson.BodyPart} title="Type of Injury" /> */}
+              {/* Type of Injury */}
+
               <CTDropdown
-                style={{marginTop: 50}}
+                style={{marginTop: 10}}
                 defaultButtonText="Select"
                 title="Type of Injury"
                 dropdownIconPosition="right"
                 data={dataJson.BodyPart}
-                // onDropdownChange={country => setData({...data, country: country})}
               />
-            </View>
 
-            <View style={{marginBottom: -50}}>
+              {/* Body Part */}
+
               <CTDropdown
-                style={{marginTop: 50}}
+                style={{marginTop: 10}}
                 data={dataJson.Injury}
                 defaultButtonText="Select"
                 dropdownIconPosition="right"
                 title="Body Part"
               />
-            </View>
 
-            <CTDatePicker title="Next visit" />
+              {/* Next visit */}
 
-            <View style={styles.submitButtonContainer}>
-              <Button title="Submit" />
-            </View>
-          </ScrollView>
+              <CTDatePicker title="Next visit" />
+
+              {/* Submit button */}
+
+              <View style={styles.submitButtonContainer}>
+                <Button title="Submit" />
+              </View>
+            </ScrollView>
+          </View>
         </View>
       </View>
     </View>
@@ -672,8 +670,23 @@ const styles = StyleSheet.create({
   submitButtonContainer: {
     marginTop: 20,
     alignSelf: 'center',
-    borderRadius: '10%',
+    borderRadius: '20%',
     width: '50%',
+  },
+  card: {
+    backgroundColor: 'white',
+    marginBottom: 10,
+    padding: 10,
+    borderRadius: 10,
+    elevation: 2,
+    shadowColor: '#000',
+    shadowOpacity: 0.2,
+    shadowOffset: {width: 0, height: 2},
+  },
+  cardContent: {
+    borderWidth: 1,
+    borderColor: 'black',
+    borderRadius: 10,
   },
 });
 
