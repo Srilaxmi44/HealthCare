@@ -11,8 +11,18 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {Logo} from 'assets';
+import {
+  CTextBox,
+  CSearch,
+  CTDropdown,
+  CTDatePicker,
+  CTCheckBox,
+} from 'components';
+import {Styles} from 'Styles';
+import {useNavigation} from '@react-navigation/native';
 
-const Login = ({navigation}) => {
+const Login = () => {
+  const navigation = useNavigation();
   const [isPasswordVisible, setPasswordVisible] = useState(false);
   const [data, setData] = useState({
     Email: '',
@@ -37,6 +47,7 @@ const Login = ({navigation}) => {
       email: data.Email,
       password: data.Password,
     };
+    console.log('console', postData);
 
     const apiEndpoint = 'http://192.168.1.5:8080/users/auth'; // Replace with your actual API endpoint
 
@@ -48,10 +59,10 @@ const Login = ({navigation}) => {
       },
       body: JSON.stringify(postData),
     })
-      .then(response => response.json())
+      .then(response => response.text())
       .then(data => {
         console.log('API Response:', data);
-        navigation.navigate('Home'); // Navigate to Home or any other page after successful login
+        navigation.navigate('RegisterPage1'); // Navigate to Home or any other page after successful login
         Alert.alert('Success', 'Login successful!');
       })
       .catch(error => {
@@ -68,7 +79,7 @@ const Login = ({navigation}) => {
             <Image source={Logo} style={Styles.loginLgo} />
           </View>
           <View>
-            <Text style={Styles.textLoginText}>Hello America</Text>
+            <Text style={Styles.textLoginText}>Login</Text>
           </View>
         </View>
         <View style={Styles.card}>
@@ -88,7 +99,6 @@ const Login = ({navigation}) => {
               placeholder="Enter  Password"
               fontname="lock"
               secureTextEntry={!isPasswordVisible}
-              value={password}
               onChangeText={text => setData({...data, Password: text})}
               inputContainerStyle={Styles.customInputContainer}
             />
@@ -115,7 +125,7 @@ const Login = ({navigation}) => {
             </View>
           </View>
 
-          <TouchableOpacity style={Styles.buttonLogin} onPress={handleRegister}>
+          <TouchableOpacity style={Styles.buttonLogin} onPress={handleLogin}>
             <Text style={Styles.buttonText}>Login</Text>
           </TouchableOpacity>
 
